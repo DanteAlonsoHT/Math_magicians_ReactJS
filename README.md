@@ -2,7 +2,7 @@
 
 # Math Magicians | Set up the Project.
 
-For this repository, I've created a project to set up the React JS project template, the main objective is to learn the way to create React apps using the oficial documentation, and learning how to set up linters for React projects.
+For this repository, I've created a project to set up the React JS project template, the main objective is to learn the way to create React apps using the official documentation, and learning how to set up linters for React projects.
 
 ## Built With 🔨
 
