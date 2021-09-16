@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) 
 
-# Math Magicians | Set up the Project.
+# Math Magicians | Components.
 
-For this repository, I've created a project to set up the React JS project template, the main objective is to learn the way to create React apps using the official documentation, and learning how to set up linters for React projects.
+For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, and learning how to create and manage React components properly.
 
 ## Built With 🔨
 
