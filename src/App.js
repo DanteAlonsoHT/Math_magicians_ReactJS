@@ -2,26 +2,16 @@ import Calculator from './components/Calculator';
 import { useState } from 'react';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      objCalculator: {
-        total: null,
-        next: null,
-        operation: null,
-      },
-    };
-    this.updateState = this.updateState.bind(this);
-  }
+const App = () => {
+  const [objCalculator, setObt] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
 
-  updateState(obj) {
-    this.setState(
-      {
-        objCalculator: obj,
-      },
-    );
-  }
+  const updateState = (obj) => {
+    setObt(obj);
+  };
 
   render() {
     const { objCalculator } = this.state;
