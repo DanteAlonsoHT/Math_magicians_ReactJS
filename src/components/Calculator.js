@@ -6,7 +6,7 @@ const Calculator = (props) => {
   let { objCalculator } = props;
 
   const calculatorButton = (obj, button) => {
-    const { updateState } = this.props;
+    const { updateState } = props;
     let newObj;
     try {
       newObj = calculate(obj, button);
@@ -44,7 +44,7 @@ const Calculator = (props) => {
     return result;
   };
 
-   return (
+  return (
     <div className="calculator-content">
       <p className="quantity-field">
         { showResult() }
