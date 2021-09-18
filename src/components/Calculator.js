@@ -17,10 +17,9 @@ const Calculator = (props) => {
     }
     objCalculator = newObj;
     updateState(newObj);
-  }
+  };
 
-  showResult() {
-    const { objCalculator } = this.props;
+  const showResult = () => {
     const { total, next, operation } = objCalculator;
     let result = null;
 
@@ -43,7 +42,7 @@ const Calculator = (props) => {
     }
 
     return result;
-  }
+  };
 
   render() {
     const { objCalculator } = this.props;
