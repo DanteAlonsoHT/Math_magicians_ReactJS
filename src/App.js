@@ -13,12 +13,11 @@ const App = () => {
     setObt(obj);
   };
 
-  render() {
-    const { objCalculator } = this.state;
-    return (
-      <body><Calculator updateState={this.updateState} objCalculator={objCalculator} /></body>
-    );
-  }
-}
+  return (
+    <body>
+      <Calculator updateState={updateState} objCalculator={objCalculator} />
+    </body>
+  );
+};
 
 export default App;
