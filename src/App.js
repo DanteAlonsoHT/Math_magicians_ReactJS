@@ -1,5 +1,5 @@
-import Calculator from './components/Calculator';
 import { useState } from 'react';
+import Calculator from './components/Calculator';
 
 // eslint-disable-next-line react/prefer-stateless-function
 const App = () => {
