@@ -17,7 +17,7 @@ class Calculator extends Component {
       newObj = calculate(obj, button);
     } catch {
       newObj = {
-        total: 'Error: Something was wrong, try again',
+        total: 'Error: Something was wrong',
       };
     }
     this.objCalculator = newObj;
