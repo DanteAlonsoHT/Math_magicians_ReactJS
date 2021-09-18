@@ -5,7 +5,7 @@ import calculate from '../logic/calculator';
 const Calculator = (props) => {
   let { objCalculator } = props;
 
-  calculate(obj, button) {
+  const calculatorButton = (obj, button) => {
     const { updateState } = this.props;
     let newObj;
     try {
@@ -15,7 +15,7 @@ const Calculator = (props) => {
         total: 'Error: Something was wrong',
       };
     }
-    this.objCalculator = newObj;
+    objCalculator = newObj;
     updateState(newObj);
   }
 
