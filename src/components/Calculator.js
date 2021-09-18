@@ -2,12 +2,8 @@ import PropTypes from 'prop-types';
 import calculate from '../logic/calculator';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.calculate = this.calculate.bind(this);
-    this.showResult = this.showResult.bind(this);
-  }
+const Calculator = (props) => {
+  let { objCalculator } = props;
 
   calculate(obj, button) {
     const { updateState } = this.props;
