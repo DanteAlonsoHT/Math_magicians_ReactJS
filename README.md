@@ -1,8 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) 
 
-# Math Magicians | Components.
+# Math Magicians | Events.
 
-For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, and learning how to create and manage React components properly.
+For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, learning how to create and manage React components properly, and learning how to update states in the components to add functionalities in the app using the React components.
+
+<center>
+<img src="./assets/calculator-react-js.PNG" style="width: 100%; max-width: 600px;">
+</center>
 
 ## Built With 🔨
 
