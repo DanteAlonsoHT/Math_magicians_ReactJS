@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
+import { Switch, Route } from 'react-router';
 import calculate from '../logic/calculator';
+import Quote from '../pages/Quote';
+import NotMatch from '../pages/NotMatch';
+import Navbar from './Navbar';
+import Home from '../pages/Home';
 
 // eslint-disable-next-line react/prefer-stateless-function
 const Calculator = (props) => {
@@ -45,40 +50,61 @@ const Calculator = (props) => {
   };
 
   return (
-    <div className="calculator-content">
-      <p className="quantity-field">
-        { showResult() }
-      </p>
-      <div className="row-buttons">
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, 'AC'); }}>AC</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '+/-'); }}>+/-</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '%'); }}>%</button>
-        <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '÷'); }}>÷</button>
-      </div>
-      <div className="row-buttons">
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '7'); }}>7</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '8'); }}>8</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '9'); }}>9</button>
-        <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, 'x'); }}>x</button>
-      </div>
-      <div className="row-buttons">
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '4'); }}>4</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '5'); }}>5</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '6'); }}>6</button>
-        <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '-'); }}>-</button>
-      </div>
-      <div className="row-buttons">
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '1'); }}>1</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '2'); }}>2</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '3'); }}>3</button>
-        <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '+'); }}>+</button>
-      </div>
-      <div className="row-buttons">
-        <button type="button" className="big-btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '0'); }}>0</button>
-        <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '.'); }}>.</button>
-        <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '='); }}>=</button>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/calculator">
+          <div className="section-content">
+            <div className="title-calculator">
+              <h4>Lets do some math!</h4>
+            </div>
+            <div className="calculator-content">
+              <p className="quantity-field">
+                { showResult() }
+              </p>
+              <div className="row-buttons">
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, 'AC'); }}>AC</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '+/-'); }}>+/-</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '%'); }}>%</button>
+                <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '÷'); }}>÷</button>
+              </div>
+              <div className="row-buttons">
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '7'); }}>7</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '8'); }}>8</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '9'); }}>9</button>
+                <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, 'x'); }}>x</button>
+              </div>
+              <div className="row-buttons">
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '4'); }}>4</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '5'); }}>5</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '6'); }}>6</button>
+                <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '-'); }}>-</button>
+              </div>
+              <div className="row-buttons">
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '1'); }}>1</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '2'); }}>2</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '3'); }}>3</button>
+                <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '+'); }}>+</button>
+              </div>
+              <div className="row-buttons">
+                <button type="button" className="big-btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '0'); }}>0</button>
+                <button type="button" className="btn btn-gray-light" onClick={() => { calculatorButton(objCalculator, '.'); }}>.</button>
+                <button type="button" className="btn btn-orange" onClick={() => { calculatorButton(objCalculator, '='); }}>=</button>
+              </div>
+            </div>
+          </div>
+        </Route>
+        <Route path="/quote">
+          <Quote />
+        </Route>
+        <Route path="/*">
+          <NotMatch />
+        </Route>
+      </Switch>
+    </>
   );
 };
 
