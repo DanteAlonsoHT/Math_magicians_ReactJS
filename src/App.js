@@ -1,5 +1,10 @@
 import { useState } from 'react';
+import { Switch, Route } from 'react-router';
 import Calculator from './components/Calculator';
+import Quote from './pages/Quote';
+import NotMatch from './pages/NotMatch';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
 const App = () => {
   const [objCalculator, setObt] = useState({
@@ -14,7 +19,21 @@ const App = () => {
 
   return (
     <body>
-      <Calculator updateState={updateState} objCalculator={objCalculator} />
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/calculator">
+          <Calculator updateState={updateState} objCalculator={objCalculator} />
+        </Route>
+        <Route path="/quote">
+          <Quote />
+        </Route>
+        <Route path="/*">
+          <NotMatch />
+        </Route>
+      </Switch>
     </body>
   );
 };
