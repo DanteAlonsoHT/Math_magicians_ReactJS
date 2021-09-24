@@ -1,9 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  display: flex;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #777;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #555;
+  max-width: 750px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+h3 {
+  color: rgba(160, 20, 20, 0.748);
+  font-size: 2rem;
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 720px;
+  padding: 1rem 2rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(44, 149, 187);
+  padding: 0.55rem;
+}
+
 .calculator-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
+  width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
@@ -55,4 +112,25 @@ button:hover {
   cursor: pointer;
   opacity: 50%;
   filter: contrast(1.5);
+}
+
+.section-content {
+  display: flex;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-content h4 {
+  width: 200px;
+  font-size: 1.8rem;
+  padding: 2rem 1rem;
+  color: #555;
+}
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 0 2rem;
 }

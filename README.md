@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) 
 
-# Math Magicians | Hooks.
+# Math Magicians | Full Website - Routes.
 
-For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, learning how to create and manage React components properly, learning how to update states in the components to add functionalities in the app using the React components, and finally, learning how to implement hooks in React.
+For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, learning how to create and manage React components properly, learning how to update states in the components to add functionalities in the app using the React components, learning how to implement hooks in React, and how to set up custom routes for our project.
 
 <center>
 <img src="./assets/calculator-react-js.PNG" style="width: 100%; max-width: 600px;">
@@ -32,6 +32,13 @@ $ git clone https://github.com/DanteAlonsoHT/Math_magicians_ReactJS.git
 ```
 $ cd Math_magicians_ReactJS
 ```
+
+- Then run the next command to install all dependencies:
+
+```
+$ npm install
+```
+
 
 - Finally, run the next command in the terminal to see the web app in your local browser, or also, you can use Live Server in Visual Studio Code.
 
