@@ -4,6 +4,8 @@
 
 For this repository, I've created a project to create a React component, the main objective is to learn the way to create React apps using the official documentation, learning how to set up linters for React projects, learning how to create and manage React components properly, learning how to update states in the components to add functionalities in the app using the React components, learning how to implement hooks in React, and how to set up custom routes for our project.
 
+[![Deploy to Netlify](https://img.shields.io/badge/Netlify--app-URL%20Click%20on%20Me-%2300ad9f)](https://unruffled-beaver-3c2942.netlify.app/)
+
 <center>
 <img src="./assets/calculator-react-js.PNG" style="width: 100%; max-width: 600px;">
 </center>
